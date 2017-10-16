@@ -1,0 +1,30 @@
+set daemon  5             # check services intervals
+set log syslog
+set httpd port 2812 and
+    use address localhost  # only accept connection from localhost
+    allow localhost        # allow localhost to connect to the server and
+    allow admin:monit      # require user 'admin' with password 'monit'
+
+###############################################################################
+## Services
+###############################################################################
+
+check process socks5-tunnel with pidfile /var/run/socks5-tunnel.pid
+  start program = "/jffs/ac86u-ssh-tunnel/monit/socks5-tunnel.sh start" with timeout 60 seconds
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/socks5-tunnel.sh stop"
+
+check process dns-tunnel with pidfile /var/run/dns-tunnel.pid                                                
+  start program = "/jffs/ac86u-ssh-tunnel/monit/dns-tunnel.sh start" with timeout 60 seconds                         
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/dns-tunnel.sh stop"
+
+check process socat with pidfile /var/run/socat.pid                                             
+  start program = "/jffs/ac86u-ssh-tunnel/monit/socat.sh start" with timeout 60 seconds                             
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/socat.sh stop"
+
+check process ipset-dns with pidfile /var/run/ipset-dns.pid                                      
+  start program = "/jffs/ac86u-ssh-tunnel/monit/ipset-dns.sh start" with timeout 60 seconds                        
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/ipset-dns.sh stop"
+
+check process redsocks with pidfile /var/run/redsocks.pid                                           
+  start program = "/jffs/ac86u-ssh-tunnel/monit/redsocks.sh start" with timeout 60 seconds                            
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/redsocks.sh stop"  
