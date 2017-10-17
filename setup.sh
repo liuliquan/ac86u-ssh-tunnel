@@ -35,11 +35,15 @@ opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/libip
 opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/ipset_6.32-2_armv7soft.ipk
 
 cp -f /jffs/ac86u-ssh-tunnel/opt/etc/* /jffs/opt/etc
-chmod 600 /opt/etc/monitrc
+chmod 600 /jffs/opt/etc/monitrc
 
 chmod +x /jffs/ac86u-ssh-tunnel/jffs.autorun
 chmod +x /jffs/ac86u-ssh-tunnel/dns/ipset-dns
 find /jffs/ac86u-ssh-tunnel -name "*.sh" -exec chmod +x {} \;
 
-echo "Please update ac86u-ssh-tunnel/id_rsa to your own rsa private key file"
-echo "Please update ac86u-ssh-tunnel/.env to config your vps user/host/port"
+ansi_green="\033[1;32m"
+ansi_std="\033[m"
+
+echo -e "$ansi_green Please update /jffs/ac86u-ssh-tunnel/id_rsa to your own rsa private key file $ansi_std"
+echo -e "$ansi_green Please update /jffs/ac86u-ssh-tunnel/.env to config your vps user/host/port and original dns $ansi_std"
+echo -e "$ansi_green Please update /jffs/ac86u-ssh-tunnel/dns/tunnel-domains.txt to config site domains to go through tunnel $ansi_std"
