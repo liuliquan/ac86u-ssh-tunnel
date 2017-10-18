@@ -28,14 +28,11 @@ mount -o bind /jffs/opt /opt
 
 wget -O - http://pkg.entware.net/binaries/armv7/installer/entware_install.sh | sh
 
-opkg install openssh-client autossh socat redsocks monit
+opkg install openssh-client autossh monit
 
 opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/libmnl_1.0.4-1_armv7soft.ipk
 opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/libipset_6.32-2_armv7soft.ipk
 opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/ipset_6.32-2_armv7soft.ipk
-
-cp -f /jffs/ac86u-ssh-tunnel/opt/etc/* /jffs/opt/etc
-chmod 600 /jffs/opt/etc/monitrc
 
 chmod +x /jffs/ac86u-ssh-tunnel/jffs.autorun
 chmod +x /jffs/ac86u-ssh-tunnel/dns/ipset-dns

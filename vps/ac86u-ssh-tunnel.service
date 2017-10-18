@@ -1,0 +1,14 @@
+[Unit]
+Description=ac86u-ssh-tunnel
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/ac86u-ssh-tunnel/vps/start.sh
+ExecStop=/ac86u-ssh-tunnel/vps/stop.sh
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
