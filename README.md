@@ -20,7 +20,7 @@ Then run following commands to install tunnel service:
 sudo git clone https://github.com/liuliquan/ac86u-ssh-tunnel.git /ac86u-ssh-tunnel
 sudo cp /ac86u-ssh-tunnel/vps/ac86u-ssh-tunnel.service /etc/systemd/system/
 sudo systemctl enable ac86u-ssh-tunnel.service
-sudo systemctl start ac86u-ssh-tunnel.service
+sudo systemctl restart ac86u-ssh-tunnel.service
 ```
 
 If you don't use systemd service, you may simply run:
