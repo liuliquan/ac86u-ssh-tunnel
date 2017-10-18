@@ -33,7 +33,7 @@ sudo /ac86u-ssh-tunnel/vps/start.sh
 SSH into AC86U router, dowload the repo into `/jffs/ac86u-ssh-tunnel` folder, then run
 ```shell
 cd /jffs/ac86u-ssh-tunnel
-chmod +x ./router/setup-router.sh && ./router/setup-router.sh
+chmod +x ./router/setup.sh && ./router/setup.sh
 ```
 ## Config router
 
