@@ -19,8 +19,8 @@ rm /root/.monit.*
 echo "Reset iptables..."
 iptables -D FORWARD -i tun1000 -j ACCEPT 2>/dev/null
 iptables -D FORWARD -o tun1000 -j ACCEPT 2>/dev/null
-iptables -t mangle -D PREROUTING -m set --match-set tunnelset dst,src -j MARK --set-mark 1000 2>/dev/null
-iptables -t mangle -D OUTPUT -m set --match-set tunnelset dst,src -j MARK --set-mark 1000 2>/dev/null
+iptables -t mangle -D PREROUTING -m set --match-set tunnelset dst -j MARK --set-mark 1000 2>/dev/null
+iptables -t mangle -D OUTPUT -m set --match-set tunnelset dst -j MARK --set-mark 1000 2>/dev/null
 iptables -t nat -D POSTROUTING -o tun1000 -j SNAT --to-source 10.20.30.2 2>/dev/null
 
 # Delete tun interface
