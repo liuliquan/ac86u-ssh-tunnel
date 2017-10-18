@@ -4,4 +4,4 @@
 mount -o bind /jffs/opt /opt
 
 # Run start script in background
-/jffs/ac86u-ssh-tunnel/start.sh &
+/jffs/ac86u-ssh-tunnel/router/start.sh &

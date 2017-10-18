@@ -3,7 +3,7 @@
 nvram set jffs2_on=1
 nvram set jffs2_enable=1
 nvram set jffs2_scripts=1
-nvram set jffs2_exec="/jffs/ac86u-ssh-tunnel/jffs.autorun"
+nvram set jffs2_exec="/jffs/ac86u-ssh-tunnel/router/jffs.autorun"
 nvram commit
 
 umount /opt
@@ -34,7 +34,7 @@ opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/libmn
 opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/libipset_6.32-2_armv7soft.ipk
 opkg install --force-checksum --force-reinstall /jffs/ac86u-ssh-tunnel/ipk/ipset_6.32-2_armv7soft.ipk
 
-chmod +x /jffs/ac86u-ssh-tunnel/jffs.autorun
+chmod +x /jffs/ac86u-ssh-tunnel/router/jffs.autorun
 chmod +x /jffs/ac86u-ssh-tunnel/dns/ipset-dns
 find /jffs/ac86u-ssh-tunnel -name "*.sh" -exec chmod +x {} \;
 

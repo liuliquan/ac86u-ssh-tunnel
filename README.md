@@ -33,7 +33,7 @@ sudo /ac86u-ssh-tunnel/vps/start.sh
 SSH into AC86U router, dowload the repo into `/jffs/ac86u-ssh-tunnel` folder, then run
 ```shell
 cd /jffs/ac86u-ssh-tunnel
-chmod +x setup-router.sh && ./setup-router.sh
+chmod +x ./router/setup-router.sh && ./router/setup-router.sh
 ```
 ## Config router
 
@@ -45,4 +45,4 @@ Use `/jffs/ac86u-ssh-tunnel/dns/tunnel-domains.txt` to config the site domains t
 
 ## Start tunnel
 
-Run `/jffs/ac86u-ssh-tunnel/start.sh` to startup tunnel. It will auto start after router reboot.
+Run `/jffs/ac86u-ssh-tunnel/router/start.sh` to startup tunnel. It will auto start after router reboot.
