@@ -502,6 +502,7 @@ blogs.icerocket.com
 blogs.libraryinformationtechnology.com
 blogs.tampabay.com
 blogs.yahoo.co.jp
+blogspot.ca
 blogspot.com
 blogspot.hk
 blogspot.jp
@@ -1696,7 +1697,7 @@ google.az
 google.ba
 google.be
 google.bg
-google.cat
+google.ca
 google.cd
 google.ci
 google.co.id
@@ -1877,6 +1878,8 @@ hentai.to
 hentaitube.tv
 hentaivideoworld.com
 heqinglian.net
+heroku.com
+herokuapp.com
 heungkongdiscuss.com
 hexieshe.com
 hexxeh.net
@@ -2541,6 +2544,7 @@ magic-net.info
 mahabodhi.org
 maiio.net
 mail-archive.com
+mailchimp.com
 maildns.xyz
 maiplus.com
 maizhong.org
@@ -3249,6 +3253,7 @@ psiphon.ca
 psiphon.civisec.org
 psiphon3.com
 psiphontoday.com
+pstmn.io
 pts.org.tw
 ptt.cc
 pttvan.org
@@ -3745,6 +3750,7 @@ sunskyforum.com
 sunta.com.tw
 sunvpn.net
 suoluo.org
+supercomputing.org
 superpages.com
 supervpn.net
 suppig.net
@@ -4234,6 +4240,7 @@ txxx.com
 tycool.com
 typeface.nyt.com
 typepad.com
+typora.io
 tz
 tzangms.com
 ua
@@ -4327,6 +4334,7 @@ uygur.fc2web.com
 uygur.org
 uymaarip.com
 uz
+v2ex.com
 v2ray.com
 van001.com
 van698.com
@@ -4756,6 +4764,7 @@ yangjianli.com
 yasni.co.uk
 yasukuni.or.jp
 yayabay.com
+ycombinator.com
 ydy.com
 yeahteentube.com
 yecl.net
