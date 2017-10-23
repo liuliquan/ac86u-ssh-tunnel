@@ -2922,6 +2922,7 @@ nowtorrents.com
 noypf.com
 np
 npa.go.jp
+npmjs.org
 npnt.me
 nps.gov
 nrk.no
