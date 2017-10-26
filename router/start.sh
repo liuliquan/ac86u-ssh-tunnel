@@ -68,6 +68,8 @@ while [ -z "`pidof lpd`" ]; do
 
 # Loose rp filter for tun interface
 echo 2 > /proc/sys/net/ipv4/conf/tun1000/rp_filter
+echo "4096 87380 16291456" > /proc/sys/net/ipv4/tcp_rmem
+echo "4096 87380 16291456" > /proc/sys/net/ipv4/tcp_wmem
 
 # Mark tunnelset ips so it will go through tun
 echo "Config iptables..."

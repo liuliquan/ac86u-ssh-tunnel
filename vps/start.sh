@@ -12,6 +12,8 @@ ip route flush cache
 
 # Enable ip forward
 sysctl -w net.ipv4.ip_forward=1
+sysctl -w net.ipv4.tcp_wmem="4096 87380 16291456"
+sysctl -w net.ipv4.tcp_rmem="4096 87380 16291456"
 
 # Setup iptables
 echo "Setup iptables..."
