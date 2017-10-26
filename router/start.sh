@@ -41,6 +41,7 @@ modprobe tun
 ip tuntap del tun1000 mode tun
 ip tuntap add tun1000 mode tun
 ip link set tun1000 up
+ip link set tun1000 txqueuelen 200
 ip addr add 10.20.30.2/32 dev tun1000
 ip route add 10.20.30.0/24 dev tun1000
 

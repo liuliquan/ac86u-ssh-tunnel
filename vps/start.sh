@@ -5,6 +5,7 @@ echo "Create tun interface..."
 ip tuntap del tun1000 mode tun
 ip tuntap add tun1000 mode tun
 ip link set tun1000 up
+ip link set tun1000 txqueuelen 200
 ip addr add 10.20.30.1/24 dev tun1000
 
 # Flush route cache
