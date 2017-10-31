@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Wait router startup
+echo "Check router status..."
+while [ -z "`pidof lpd`" -o -z "`pidof wred`" -o -z "`pidof tcd`" -o -z "`pidof miniupnpd`" -o -z "`pidof mcpd`" -o -z "`nvram get success_start_service`" -o "`nvram get success_start_service`" != "1" ]; do
+        sleep 5;
+    done
+
 # Load kernel modules
 if [ -z "`lsmod | grep -w ip_set`" ]; then
     echo "Load ip_set module..."
@@ -13,12 +19,6 @@ if [ -z "`lsmod | grep -w xt_set`" ]; then
     echo "Load xt_set module..."
     insmod /jffs/ac86u-ssh-tunnel/ko/xt_set.ko
 fi
-
-# Wait router startup
-echo "Check router status..."
-while [ -z "`pidof ntp`" ]; do
-        sleep 3;
-    done
 
 # Copy config files
 echo "Copy config files..."
@@ -58,14 +58,12 @@ ip route flush cache
 # Start services
 echo "Start services..."
 monit -c /opt/etc/monitrc
-sleep 2
+sleep 5
 monit monitor all
 
-# Wait router startup
-echo "Check router status..."
-while [ -z "`pidof lpd`" ]; do
-        sleep 5;
-    done
+# Config dnsmasq
+echo "Config dnsmasq..."
+sh -x /jffs/ac86u-ssh-tunnel/dns/dnsmasq.sh
 
 # Loose rp filter for tun interface
 echo 2 > /proc/sys/net/ipv4/conf/tun1000/rp_filter
@@ -84,7 +82,3 @@ iptables -t mangle -D OUTPUT -m set --match-set tunnelset dst -j MARK --set-mark
 iptables -t mangle -I OUTPUT -m set --match-set tunnelset dst -j MARK --set-mark 1000
 iptables -t nat -D POSTROUTING -o tun1000 -j SNAT --to-source 10.20.30.2 2>/dev/null
 iptables -t nat -I POSTROUTING -o tun1000 -j SNAT --to-source 10.20.30.2
-
-# Config dnsmasq
-echo "Config dnsmasq..."
-sh -x /jffs/ac86u-ssh-tunnel/dns/dnsmasq.sh

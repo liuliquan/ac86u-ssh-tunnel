@@ -153,6 +153,7 @@ afxcdn.net
 ag
 agnesb.fr
 agoogleaday.com
+ahcdn.com
 ai
 ai-kan.net
 ai-wen.net
@@ -268,6 +269,7 @@ app.box.com
 app.heywire.com
 app.tutanota.com
 appdownloader.net
+appdynamics.com
 appledaily.com
 appsocks.net
 appspot.com
@@ -435,7 +437,6 @@ biantailajiao.com
 biantailajiao.in
 biblesforamerica.org
 bic2011.org
-bintray.com
 bigfools.com
 bigjapanesesex.com
 bigmoney.biz
@@ -443,6 +444,7 @@ bignews.org
 bigsound.org
 billypan.com
 billywr.com
+bintray.com
 bipic.net
 bit.do
 bit.ly
@@ -667,6 +669,7 @@ cdn.helixstudios.net
 cdn.printfriendly.com
 cdn.softlayer.net
 cdn1.lp.saboom.com
+cdn13.com
 cdnews.com.tw
 cdninstagram.com
 cdp1989.org
@@ -824,6 +827,7 @@ clarionproject.org
 classicalguitarblog.net
 clb.org.hk
 cldr.unicode.org
+cldup.com
 cleansite.biz
 cleansite.info
 cleansite.us
@@ -835,6 +839,7 @@ clinica-tibet.ru
 clipfish.de
 cloakpoint.com
 cloudfront.net
+cloudup.com
 club1069.com
 cmi.org.tw
 cmp.hku.hk
@@ -1177,8 +1182,8 @@ ecimg.tw
 ecministry.net
 economist.com
 ecsm.vs.com
-edgekey.net
 edgecastcdn.net
+edgekey.net
 edicypages.com
 edmontonchina.cn
 edmontonservice.com
@@ -1517,6 +1522,7 @@ frommel.net
 frontlinedefenders.org
 frootvpn.com
 fscked.org
+fsdn.com
 fsurf.com
 ftchinese.com
 ftp1.biz
