@@ -2,7 +2,7 @@
 
 # Wait router startup
 echo "Check router status..."
-while [ -z "`pidof lpd`" -o -z "`pidof wred`" -o -z "`pidof miniupnpd`" -o -z "`pidof mcpd`" -o -z "`nvram get success_start_service`" -o "`nvram get success_start_service`" != "1" ]; do
+while [ -z "`pidof lpd`" -o -z "`pidof disk_monitor`" -o -z "`pidof miniupnpd`" -o -z "`pidof mcpd`" -o -z "`nvram get success_start_service`" -o "`nvram get success_start_service`" != "1" ]; do
         sleep 5;
     done
 
