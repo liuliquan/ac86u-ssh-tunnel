@@ -28,9 +28,10 @@ mount -o bind /jffs/opt /opt
 
 wget -O - http://pkg.entware.net/binaries/armv7/installer/entware_install.sh | sh
 
-opkg install openssh-client autossh ipset ipset-dns monit
+opkg install openssh-client autossh ipset monit
 
 chmod +x /jffs/ac86u-ssh-tunnel/router/jffs.autorun
+chmod +x /jffs/ac86u-ssh-tunnel/dns/ipset-dns
 find /jffs/ac86u-ssh-tunnel -name "*.sh" -exec chmod +x {} \;
 
 ansi_green="\033[1;32m"
