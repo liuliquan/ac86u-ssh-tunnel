@@ -26,7 +26,7 @@ cp -f /opt/scripts/* /jffs/opt/scripts
 
 mount -o bind /jffs/opt /opt
 
-wget -O - http://pkg.entware.net/binaries/armv7/installer/entware_install.sh | sh
+wget -O - http://bin.entware.net/armv7sf-k2.6/installer/generic.sh | sh
 
 opkg install openssh-client autossh ipset monit
 
