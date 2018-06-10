@@ -24,6 +24,7 @@ fi
 echo "Copy config files..."
 cp -f /jffs/ac86u-ssh-tunnel/opt/etc/* /jffs/opt/etc
 chmod 600 /jffs/opt/etc/monitrc
+chmod 600 /jffs/ac86u-ssh-tunnel/id_rsa
 
 # Create 'tunnelset' ipset
 if [ -z "`ipset list | grep -w 'Name: tunnelset'`" ]; then
