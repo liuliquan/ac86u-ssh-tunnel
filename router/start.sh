@@ -23,6 +23,7 @@ fi
 # Chmod config files
 echo "Chmod config files..."
 chmod 600 /jffs/ac86u-ssh-tunnel/monit/monitrc
+cp -f /jffs/ac86u-ssh-tunnel/monit/monitrc /opt/etc/monitrc
 chmod 600 /jffs/ac86u-ssh-tunnel/id_rsa
 
 # Create 'tunnelset' ipset
@@ -47,6 +48,6 @@ ip route add 10.20.30.0/24 dev tun1000
 
 # Start services
 echo "Start services..."
-monit -c /jffs/ac86u-ssh-tunnel/monit/monitrc
+monit -c /opt/etc/monitrc
 sleep 5
 monit monitor all
