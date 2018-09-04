@@ -2,7 +2,7 @@
 
 export LD_LIBRARY_PATH=/opt/lib
 
-PIDFILE=/var/run/ipset-dns.pid
+PIDFILE=/var/run/monit-ipset-dns.pid
 
 if [ "$1" = "start" -o -z "$1" ]; then
 

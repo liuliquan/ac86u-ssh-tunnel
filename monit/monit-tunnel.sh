@@ -5,7 +5,7 @@ do
   eval "${env}"
 done
 
-PIDFILE=/var/run/ssh-tunnel.pid
+PIDFILE=/var/run/monit-tunnel.pid
 
 export AUTOSSH_PIDFILE=$PIDFILE
 export AUTOSSH_GATETIME="0"

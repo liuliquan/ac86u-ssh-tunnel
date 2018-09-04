@@ -9,6 +9,8 @@ done
 echo "Stop services..."
 monit stop all
 sleep 2
+killall -9 dnsmasq.sh 2</dev/null
+killall -9 route.sh 2</dev/null
 killall -9 autossh 2</dev/null
 killall -9 ssh 2</dev/null
 killall -9 ipset-dns 2</dev/null

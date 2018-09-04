@@ -1,0 +1,26 @@
+set daemon  5             # check services intervals
+set log syslog
+set httpd port 2812 and
+    use address localhost  # only accept connection from localhost
+    allow localhost        # allow localhost to connect to the server and
+    allow admin:monit      # require user 'admin' with password 'monit'
+
+###############################################################################
+## Services
+###############################################################################
+
+check process ssh-tunnel with pidfile /var/run/monit-tunnel.pid
+  start program = "/jffs/ac86u-ssh-tunnel/monit/monit-tunnel.sh start" with timeout 60 seconds
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/monit-tunnel.sh stop"
+
+check process ipset-dns with pidfile /var/run/monit-ipset-dns.pid                                      
+  start program = "/jffs/ac86u-ssh-tunnel/monit/monit-ipset-dns.sh start" with timeout 60 seconds                        
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/monit-ipset-dns.sh stop"
+
+check process route with pidfile /var/run/monit-route.pid                                      
+  start program = "/jffs/ac86u-ssh-tunnel/monit/monit-route.sh start" with timeout 60 seconds                        
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/monit-route.sh stop"
+
+check process dnsmasq with pidfile /var/run/monit-dnsmasq.pid                                      
+  start program = "/jffs/ac86u-ssh-tunnel/monit/monit-dnsmasq.sh start" with timeout 60 seconds                        
+  stop program  = "/jffs/ac86u-ssh-tunnel/monit/monit-dnsmasq.sh stop"

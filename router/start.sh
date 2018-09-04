@@ -20,10 +20,9 @@ if [ -z "`lsmod | grep -w xt_set`" ]; then
     insmod /jffs/ac86u-ssh-tunnel/ko/xt_set.ko
 fi
 
-# Copy config files
-echo "Copy config files..."
-cp -f /jffs/ac86u-ssh-tunnel/opt/etc/* /jffs/opt/etc
-chmod 600 /jffs/opt/etc/monitrc
+# Chmod config files
+echo "Chmod config files..."
+chmod 600 /jffs/ac86u-ssh-tunnel/monit/monitrc
 chmod 600 /jffs/ac86u-ssh-tunnel/id_rsa
 
 # Create 'tunnelset' ipset
@@ -48,6 +47,6 @@ ip route add 10.20.30.0/24 dev tun1000
 
 # Start services
 echo "Start services..."
-monit -c /opt/etc/monitrc
+monit -c /jffs/ac86u-ssh-tunnel/monit/monitrc
 sleep 5
 monit monitor all
