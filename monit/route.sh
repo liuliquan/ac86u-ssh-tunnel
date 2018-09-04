@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Save PID
-PIDFILE=/var/run/monit-route.pid
+PIDFILE=$1
 echo $$ > $PIDFILE
 
 # Delete the rule which will make first loop always re-config

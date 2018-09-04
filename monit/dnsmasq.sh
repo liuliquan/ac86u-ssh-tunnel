@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Save PID
-PIDFILE=/var/run/monit-dnsmasq.pid
+PIDFILE=$1
 echo $$ > $PIDFILE
 
 # Load env

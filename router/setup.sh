@@ -28,7 +28,7 @@ mount -o bind /jffs/opt /opt
 
 wget -O - http://bin.entware.net/aarch64-k3.10/installer/generic.sh | sh
 
-opkg install autossh ipset monit bind-dig
+opkg install ipset monit bind-dig
 opkg install /jffs/ac86u-ssh-tunnel/router/openssh-client_7.6p1-1_aarch64-3.10.ipk
 
 chmod +x /jffs/ac86u-ssh-tunnel/router/jffs.autorun
