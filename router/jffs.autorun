@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# Mount opt directory                                  
+mkdir /tmp/opt
+
+# Mount opt directory
 mount -o bind /jffs/opt /opt
 
 # Run start script in background
