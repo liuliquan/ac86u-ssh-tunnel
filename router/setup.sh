@@ -22,6 +22,8 @@ mkdir /jffs/opt/tmp
 mkdir /jffs/opt/usr
 mkdir /jffs/opt/var
 
+mkdir /tmp/opt
+
 cp -f /opt/scripts/* /jffs/opt/scripts
 
 mount -o bind /jffs/opt /opt
