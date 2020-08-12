@@ -22,15 +22,13 @@ mkdir /jffs/opt/tmp
 mkdir /jffs/opt/usr
 mkdir /jffs/opt/var
 
-mkdir /tmp/opt
-
 cp -f /opt/scripts/* /jffs/opt/scripts
-
+mkdir /tmp/opt
 mount -o bind /jffs/opt /opt
 
 wget -O - http://bin.entware.net/aarch64-k3.10/installer/generic.sh | sh
 
-opkg install ipset openssh-client monit bind-dig
+opkg install ipset openssh-client monit bind-dig curl
 
 chmod +x /jffs/ac86u-ssh-tunnel/router/jffs.autorun
 chmod +x /jffs/ac86u-ssh-tunnel/dns/ipset-dns

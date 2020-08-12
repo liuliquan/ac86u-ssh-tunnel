@@ -1,0 +1,15 @@
+set daemon  30             # check services intervals
+set log syslog
+set httpd port 2812 and
+    use address localhost  # only accept connection from localhost
+    allow localhost        # allow localhost to connect to the server and
+    allow admin:monit      # require user 'admin' with password 'monit'
+
+###############################################################################
+## Services
+###############################################################################
+
+check host 10.20.30.1 with address 10.20.30.1
+    start program = "/jffs/ac86u-ssh-tunnel/router/start.sh" with timeout 120 seconds
+    stop program  = "/jffs/ac86u-ssh-tunnel/router/stop.sh"
+    if failed ping4 count 1 with timeout 3 seconds then restart

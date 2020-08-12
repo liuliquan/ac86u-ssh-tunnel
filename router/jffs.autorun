@@ -1,9 +1,17 @@
 #!/bin/sh
 
-mkdir /tmp/opt
-
 # Mount opt directory
+cp -f /opt/scripts/* /jffs/opt/scripts
+mkdir /tmp/opt
 mount -o bind /jffs/opt /opt
 
-# Run start script in background
-/jffs/ac86u-ssh-tunnel/router/start.sh &
+# Chmod config files
+echo "Chmod config files..."
+chmod 600 /jffs/ac86u-ssh-tunnel/router/monitrc
+cp -f /jffs/ac86u-ssh-tunnel/router/monitrc /opt/etc/monitrc
+
+# Start services
+echo "Start services..."
+monit -c /opt/etc/monitrc
+sleep 5
+monit monitor all
